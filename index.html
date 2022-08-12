@@ -1,313 +1,93 @@
-!DOCTYPE html
-html lang=en
+<!DOCTYPE html>
+<html lang="en">
 
-head
-    meta charset=UTF-8
-    meta http-equiv=X-UA-Compatible content=IE=edge
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    title犬title
-    style
-        div {
-            cursor grab;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>區塊練習</title>
+    <style>
+        #wrap {
+            width: 600px;
+            height: 600px;
         }
 
-        body {
-            margin 0px;
+        #header {
+            width: 600px;
+            height: 100px;
+            background-color: green;
+            color: aliceblue;
+            margin: 10px 0px;
         }
 
-         {
-            box-sizing border-box;
-            background-attachment fixed;
+        #aside {
+            width: 140px;
+            height: 360px;
+            background-color: yellow;
+            float: left;
+            margin-right: 10px ;
         }
 
-        a {
-            margin 0px 60px;
+        #block {
+            width: 450px;
+            height: 360px;
+            background-color: white;
+            float: right;
         }
 
-        .header {
-            width 100%;
-            height 180px;
-            background #AAC0AA;
-            text-align center;
-            font-size xx-large;
-            line-height 200px;
-            font-weight 700;
-            z-index 10;
-            color aliceblue;
-            position fixed;
+        #block1 {
+            width: 450px;
+            height: 110px;
+            background-color: brown;
+            color: aliceblue;
+            clear: left;
+            margin-bottom: 10px ;
+
         }
 
-        #pic01 {
-            width 190px;
-            height 180px;
-            background-image url('.辛苦了.jpg');
-            background-repeat no-repeat;
-            position relative;
-            float left;
+        #block2 {
+            width: 450px;
+            height: 110px;
+            background-color: rebeccapurple;
+            color: aliceblue;
+            margin-bottom: 10px ;
+
         }
 
-         
-        #anchor01 {
-            position absolute;
-            top 50px;
+        #block3 {
+            width: 450px;
+            height: 120px;
+            background-color: orange;
+            color: aliceblue;
+            margin-bottom: 10px ;
+
         }
 
-        #anchor02 {
-            position absolute;
-            top 50px;
+        #footer {
+            width: 600px;
+            height: 120px;
+            background-color: red;
+            float: left;
+            margin-top: 10px ;
+
         }
+    </style>
+</head>
 
-        #anchor03 {
-            position absolute;
-            top 50px;
-        }
+<body>
+    <div id="wrap">
+        <div id="header">600*120px</div>
+        <div id="main">
+            <div id="aside">150*360px</div>
+            <div id="block">
+                <div id="block1">450*120px</div>
+                <div id="block2">450*120px</div>
+                <div id="block3">450*120px</div>
+            </div>
+        </div>
+        <div id="footer">600*120px</div>
+    </div>
 
-        #anchor04 {
-            position absolute;
-            top 50px;
-        }
+</body>
 
-        #anchor05 {
-            position absolute;
-            top 50px;
-        } 
-        .section {
-            width 100%;
-            height 100vh;
-        }
-
-        #section01 {
-            width 100%;
-            height 100vh;
-            background-color gray;
-            background-image url('httpspic4.zhimg.com80v2-47dec74653ee64dbdac09a0ec984f54f_1440w.jpg');
-            background-repeat no-repeat;
-            background-size cover;
-            background-attachment fixed;
-            position relative;
-            font-size 30px;
-        }
-
-        #section02 {
-            width 100%;
-            height 40vh;
-            background-color lightseagreen;
-            position relative;
-        }
-
-        #section03 {
-            width 100%;
-            height 100vh;
-            background-color yellow;
-            background-image url('httpswww.bluevalleyanimalhospital.netblogwp-contentuploads202205iStock-1184184060-2000x1334.jpg');
-            background-repeat no-repeat;
-            background-size cover;
-            background-position center;
-            position relative;
-        }
-
-        #section04 {
-            width 100%;
-            height 20vh;
-            background-color dodgerblue;
-            position relative;
-        }
-
-        #section05 {
-            width 100%;
-            height 100vh;
-            background-color burlywood;
-            background-image url('httpsmoderndogmagazine.comsitesdefaultfilesimagesarticlestop_imageshusky2.jpg');
-            background-repeat no-repeat;
-            background-size cover;
-            background-position center;
-            position relative;
-        }
-
-        #section06 {
-            width 100%;
-            height 20vh;
-            background-color orange;
-            position relative;
-        }
-
-        #section07 {
-            width 100%;
-            height 100vh;
-            background-color gray;
-            background-image url('httpswallpaperaccess.comfull372625.jpg');
-            background-repeat no-repeat;
-            background-size cover;
-            background-position center;
-            position relative;
-        }
-
-        #section08 {
-            width 100%;
-            height 20vh;
-            background-color gray;
-            position relative;
-        }
-
-        #text01-1 {
-
-            background-color black;
-            color aliceblue;
-            font-size 30px;
-            letter-spacing 8px;
-            left calc(50% - 170px);
-            top calc(50% - 25px);
-            position absolute;
-            padding-left 25px;
-            display flex;
-            align-items center;
-        }
-
-        #text01-2 {
-            width 350px;
-            height 50px;
-            font-size 50px;
-        }
-
-        #text02-1 {
-            background-color lightseagreen;
-            font-size 50px;
-            position absolute;
-            left 50%;
-            top 40%;
-            display flex;
-            align-items center;
-        }
-
-        #text02-2 {
-            width 350px;
-            height 50px;
-            font-size 24px;
-            position absolute;
-            left 50%;
-            top 50%;
-            display flex;
-            align-items center;
-        }
-
-        #text03 {
-            width 350px;
-            height 50px;
-            font-size 50px;
-            display flex;
-            align-items center;
-        }
-
-        #text04 {
-            width 350px;
-            height 50px;
-            color white;
-            font-size 50px;
-            position absolute;
-            left 50%;
-            top 30%;
-            display flex;
-            align-items center;
-        }
-
-        #text05 {
-            width 350px;
-            height 50px;
-            color white;
-            font-size 50px;
-        }
-
-        #text06 {
-            width 350px;
-            height 50px;
-            color white;
-            font-size 50px;
-            position absolute;
-            left 50%;
-            top 30%;
-            display flex;
-            align-items center;
-        }
-
-        #text07-1 {
-            width 350px;
-            height 50px;
-            color white;
-            font-size 50px;
-            display flex;
-            align-items center;
-        }
-
-        #text07-2 {
-            width 350px;
-            height 50px;
-            background-color black;
-            color aliceblue;
-            font-size 30px;
-            letter-spacing 8px;
-            left calc(50% - 170px);
-            top calc(50% - 25px);
-            position absolute;
-            padding-left 65px;
-            display flex;
-            align-items center;
-        }
-
-        #text08 {
-            width 350px;
-            height 50px;
-            color white;
-            font-size 50px;
-            position absolute;
-            left 50%;
-            top 30%;
-            display flex;
-            align-items center;
-        }
-    style
-head
-
-body
-    div class=header
-        div id=pic01div
-        a href=#pic01Topa
-        a href=#section01Schnauzera
-        a href=#section03Golden Retrievera
-        a href=#section05Huskya
-        a href=#section07Shibaa
-    div
-    div id=section01
-
-        div id=text01-1
-            SCROLL DOWN
-        div
-        div id=text01-2Schnauzerdiv
-    div
-    div id=section02
-        div id=text02-1Springdiv
-    div
-    div id=section03
-        div id=text03Golden Retrieverdiv
-    div
-    div id=section04
-        div id=text04Summerdiv
-    div
-    div id=section05
-        div id=text05Huskydiv
-    div
-    div id=section06
-        div id=text06Autumndiv
-    div
-    div id=section07
-        div id=text07-1Shibadiv
-        div id=text07-2
-            SCROLL UP
-        div
-    div
-    div id=section08
-        div id=text08Winterdiv
-    div
-    span style=font-familysans-serif;colorred;標籤紅字span
-body
-
-html
+</html>
